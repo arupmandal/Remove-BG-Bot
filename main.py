@@ -8,8 +8,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 load_dotenv()
 
-REMOVEBG_API = os.environ.get("REMOVEBG_API", "ovQ96or6XY9cVHPJMbe3b2D4")
-UNSCREEN_API = os.environ.get("UNSCREEN_API", "Nbd11whTLcZuiArWMoJhzTRu")
+REMOVEBG_API = os.environ.get("REMOVEBG_API", "")
+UNSCREEN_API = os.environ.get("UNSCREEN_API", "")
 
 Bot = Client(
     "Remove Background Bot",
