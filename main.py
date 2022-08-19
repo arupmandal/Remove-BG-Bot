@@ -1,4 +1,3 @@
-import asyncio
 import os
 import requests
 from dotenv import load_dotenv
@@ -8,8 +7,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 load_dotenv()
 
-REMOVEBG_API = os.environ.get("REMOVEBG_API", "")
-UNSCREEN_API = os.environ.get("UNSCREEN_API", "")
+REMOVEBG_API = os.environ.get("REMOVEBG_API", "ovQ96or6XY9cVHPJMbe3b2D4")
+UNSCREEN_API = os.environ.get("UNSCREEN_API", "Nbd11whTLcZuiArWMoJhzTRu")
 
 Bot = Client(
     "Remove Background Bot",
@@ -166,7 +165,7 @@ async def remove_background(bot, update):
             reply_markup=ERROR_BUTTONS
         )
         return
-    update.reply_chat_action("typing")
+    await update.reply_chat_action("typing")
     message = await update.reply_text(
         text="Processing",
         quote=True,
